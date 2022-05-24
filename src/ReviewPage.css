@@ -1,0 +1,48 @@
+.review {
+    color: #212529;
+    background: #f1f1f1;
+}
+
+.review_title {
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 120%;
+    font-family: 'Rubik', sans-serif;
+    letter-spacing: -1px;
+    color: #444;
+    border-bottom: 6px solid #14c6ad;
+    padding: 10px 5px 10px 22px;
+}
+
+.review_container {
+    display: flex;
+    padding: 20px 0 0 0;
+    
+}
+
+.review_tabs {
+    border: 1px solid #ccc;
+}
+
+.reveiw_tabs.hover {
+    color: blue;
+}
+
+button {
+    padding: 10px;
+    color: #14c6ad;
+    /*border-width: 2px;*/
+    border-style: outset;
+    border-color: transparent;
+    border-image: initial;
+}
+
+.review_contents {
+    background: #fff;
+    padding: 25px;
+    width: 100%;
+    border-radius: 7px;
+    display: inline-block;
+    border: 1px solid #efefef;
+    box-shadow: 0 0 13px #eee;
+}
