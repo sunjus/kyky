@@ -1,0 +1,11 @@
+.review_container {
+    display: flex;
+    justify-content:flex-start;
+    color: black;
+    background-color: lightgray;
+}
+
+.review_container_item {
+    margin: 10px;
+    padding: 10px;
+}
