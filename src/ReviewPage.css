@@ -1,48 +1,63 @@
 .review {
     color: #212529;
     background: #f1f1f1;
+    max-width: 1240px;
+    margin: 30px auto;
 }
 
 .review_title {
     font-size: 23px;
-    font-weight: 400;
+    font-weight: 300;
     line-height: 120%;
-    font-family: 'Rubik', sans-serif;
+    width: 20%;
+    font-family: 'Roboto', sans-serif;
     letter-spacing: -1px;
-    color: #444;
+    color: rgb(93, 93, 93);
     border-bottom: 6px solid #14c6ad;
-    padding: 10px 5px 10px 22px;
+    padding: 10px 5px 10px 2px;
 }
 
 .review_container {
     display: flex;
     padding: 20px 0 0 0;
-    
+    width: 100%;
+    max-width: 1240px;
 }
 
 .review_tabs {
-    border: 1px solid #ccc;
+   
 }
 
-.reveiw_tabs.hover {
-    color: blue;
-}
-
-button {
+.review_btn {
     padding: 10px;
     color: #14c6ad;
+    font-size: 17px;
     /*border-width: 2px;*/
     border-style: outset;
     border-color: transparent;
     border-image: initial;
 }
 
+.review_btn:hover {
+    color: rgb(18, 18, 170);
+    cursor: pointer;
+}
+
+.review_btn:focus {
+    color: black;
+    background-color:white;
+    border: 1px solid rgb(222, 222, 222);
+    box-shadow: 13px 5px rgb(211, 211, 211);
+}
+
 .review_contents {
     background: #fff;
-    padding: 25px;
+    padding: 15px;
     width: 100%;
+    max-width: 1240px;
     border-radius: 7px;
     display: inline-block;
     border: 1px solid #efefef;
-    box-shadow: 0 0 13px #eee;
+    box-shadow: 13px 5px #eee;
+    font-size: 17px;
 }

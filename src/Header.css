@@ -1,0 +1,28 @@
+.header {
+    background-color: white;
+    padding: 15px 140px;
+    margin: 0px auto;
+    max-width: 1240px;
+}
+
+.header-container {
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.header-container-menu ul {
+    display: flex;
+    justify-content:space-around;
+    list-style: none;
+}
+
+.header-container-menu ul li {
+    margin-left: 20px;
+    font-size: 15px;
+    color:#7A7A7A;
+}
+
+.header-container-menu ul li img {
+    width: 20px;
+}

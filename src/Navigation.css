@@ -1,0 +1,23 @@
+.navigation {
+    margin: 20px auto;
+    background-color:white;
+    width: 100%;
+    max-width: 1240px;
+    height: 50px;
+    border-radius: 7px;
+    border: 1px solid #efefef;
+    box-shadow: 0 0 13px #eee;
+}
+
+.navigation ul {
+    list-style: none; 
+    display: flex;
+    justify-content:flex-start;
+    align-content: center;
+    padding: 12px 30px;
+    color: #7A7A7A;
+}
+
+.navigation ul li {
+    margin-right: 30px;
+}
