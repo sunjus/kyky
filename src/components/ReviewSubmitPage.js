@@ -36,21 +36,21 @@ function ReviewSubmitPage() {
         </div>
         <div className="reviewsubmit-container form">
           <form>
-            <div className="job_title">job_title</div>
+            <div className="job_title">
+              <h3>Job Name</h3>
+              <h4>Frontend Developer</h4>
+            </div>
             <div className="board">
-              <ul>
-                <li>1. Service as request</li>
-                <li>2. Service on time</li>
-                <li>3. Service with care</li>
-              </ul>
-              <div className="myrating">⭐</div>
               <div className="myrating">
+                <h4>Service as request</h4>
                 <ReviewRateWithStar rate={rates[0]} setRate={setRateAt(0)} />
               </div>
               <div className="myrating">
+                <h4>Service on time</h4>
                 <ReviewRateWithStar rate={rates[1]} setRate={setRateAt(1)} />
               </div>
               <div className="myrating">
+                <h4>Service with care</h4>
                 <ReviewRateWithStar rate={rates[2]} setRate={setRateAt(2)} />
               </div>
             </div>
@@ -65,7 +65,8 @@ function ReviewSubmitPage() {
               ))}
             </div>
             <div className="experience">
-              <input type="text" placeholder="Please share your experience" />
+              <h3>Describe your experience</h3>
+              <input type="text" placeholder="" className="experience_textarea" />
             </div>
             <div className="submit_button">
               <button type="submit" className="submit_btn">Submit Review</button>
