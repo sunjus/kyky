@@ -30,7 +30,10 @@ function Reviewpage() {
   const [tabIndex, setTabIndex] = useState(0);
   const currentTab = tabsData[tabIndex];
   // take data from static js file while dev
+  // later we can use props/contexts/storage(firebase?)/api or so on.
   const { reviewList } = data;
+  // NOTE: All data may be collected by Reviewpage,
+  //       and all child components use props which is system independent
   return (
     <div className="reviewpage">
       <div className="review_title">
