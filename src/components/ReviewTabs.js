@@ -1,11 +1,11 @@
 /* eslint-disable react/prop-types */
-function ReviewTabs({ tabs, changeTab }) {
+function ReviewTabs({ tabs, tabIndex, setTabIndex }) {
   return (
     <>
       {
-        tabs.map((tab) => (
-          <div className="review_tabs" key={tab.id}>
-            <button onClick={() => changeTab(tab.id)} classNane="review_btn" type="button">
+        tabs.map((tab, index) => (
+          <div className="review_tabs" key={tab.id} calss={tabIndex === index ? 'active' : ''}>
+            <button onClick={() => setTabIndex(index)} className="review_btn" type="button">
               {tab.title}
             </button>
           </div>
