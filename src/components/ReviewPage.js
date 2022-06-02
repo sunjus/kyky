@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Review from './Review';
+import './ReviewPage.css';
 
 const content = [
   {

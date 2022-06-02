@@ -1,6 +1,6 @@
 import React from 'react';
-import Logo from './assets/logo.png';
-import Fi from './assets/finland.png';
+import Logo from '../assets/logo.png';
+import Fi from '../assets/finland.png';
 import './Header.css';
 
 function Header() {

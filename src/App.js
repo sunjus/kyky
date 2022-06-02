@@ -1,10 +1,10 @@
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Header from './Header';
-import Navigation from './Navigation';
-import ReviewPage from './ReviewPage';
-import ReviewSubmitPage from './ReviewSubmitPage';
-import Footer from './Footer';
+import Header from './components/Header';
+import Navigation from './components/Navigation';
+import ReviewPage from './components/ReviewPage';
+import ReviewSubmitPage from './components/ReviewSubmitPage';
+import Footer from './components/Footer';
 
 function App() {
   return (

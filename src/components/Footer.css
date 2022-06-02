@@ -1,8 +1,8 @@
 .footer {
     background-color: #25282B;
-    padding: 50px;
-    margin: 0px auto;
-    max-width: 1400px;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 40px 80px 40px 20px;
 }
 
 .footer-list {
@@ -12,16 +12,11 @@
 
 .footer-list ul {
     list-style: none;
-    align-items: center;
-    align-content: center;
-    justify-content:center;
 }
 
 .footer-list ul li {
     color: white;
     line-height: 2;
-    align-items: center;
-    align-content: center;
 }
 
 h2 {
@@ -36,7 +31,6 @@ h2 {
 
 .footer-social ul {
     display: flex;
-    justify-content:center;
 }
 
 .footer-social ul li img{
