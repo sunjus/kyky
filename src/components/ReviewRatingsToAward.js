@@ -1,5 +1,9 @@
 /* eslint-disable react/prop-types */
 function ReviewRatingsToAward({ items }) {
+  const nItems = Array.isArray(items) ? items.length : 0;
+  if (nItems < 1) {
+    return <span>There are no reviews to be awarded</span>;
+  }
   return (
     <table>
       <tr>

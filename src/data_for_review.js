@@ -1,26 +1,22 @@
-const contents = [
-  {
-    tab: 'Ratings to Award (to sellers)',
-    emptyMsg: 'There are no reviews to be awarded',
-    items: [
-      {
-        transactionId: 0,
-        service: 'Pet sitter',
-        seller: 'Claudia',
-        completed: 'n/a',
-        price: 18,
-      },
-    ],
-  },
-  {
-    tab: 'Pending Ratings',
-    emptyMsg: 'You have no pending reviews',
-  },
-  {
-    tab: 'My Ratings (as buyer)',
-    emptyMsg: 'You have no reviews',
-    reviews: [],
-  },
-];
+const reviewList = {
+  toAward: [
+    {
+      transactionId: 0,
+      service: 'Pet sitter',
+      seller: 'Claudia',
+      completed: 'n/a',
+      price: 18,
+    },
+    {
+      transactionId: 1,
+      service: 'Frontend Developer',
+      seller: 'Serena',
+      completed: 'n/a',
+      price: 50,
+    },
+  ],
+  pending: [],
+  myratings: [],
+};
 
-export default { contents };
+export default { reviewList };

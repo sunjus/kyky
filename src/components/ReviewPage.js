@@ -1,36 +1,52 @@
 import React, { useState } from 'react';
-import './ReviewPage.css';
 import data from '../data_for_review';
+import ReviewTabs from './ReviewTabs';
 import ReviewRatingsToAward from './ReviewRatingsToAward';
+import './ReviewPage.css';
 
-const useTabs = (initialTabs, allTabs) => {
-  const [contentIndex, setContentIndex] = useState(initialTabs);
+/*
+const useTabs = (initialTabId) => {
+  const [tabId, setTabId] = useState(initialTabs);
   return {
-    contentIndex,
+    tabIndex,
     contentItem: allTabs[contentIndex],
     contentChange: setContentIndex,
   };
 };
+*/
+
+const tabsData = [
+  {
+    title: 'Ratings to Award (to sellers)',
+    emptyMsg: 'There are no reviews to be awarded',
+    id: 'toAward',
+  },
+  {
+    title: 'Pending Ratings',
+    emptyMsg: 'You have no pending reviews',
+    id: 'pending',
+  },
+  {
+    title: 'My Ratings (as buyer)',
+    emptyMsg: 'You have no reviews',
+    id: 'myratings',
+  },
+];
 
 function Reviewpage() {
-  const { contentIndex, contentItem, contentChange } = useTabs(0, data.contents);
+  const [tabId, setTabId] = useState('toAward');
 
+  const { reviewList } = data;
   return (
     <div className="reviewpage">
       <div className="review_title">
-        <h3>Reveiws.Feedback</h3>
+        <h3>Reviews.Feedback</h3>
       </div>
       <div className="review_container">
-        {data.contents.map((section, index) => (
-          <div className="review_tabs" key={section.tab}>
-            <button onClick={() => contentChange(index)} classNane="review_btn" type="button">
-              {section.tab}
-            </button>
-          </div>
-        ))}
+        <ReviewTabs tabs={tabsData} changeTab={setTabId} />
       </div>
       <div className="review_contents">
-        {contentIndex === 0 && <ReviewRatingsToAward items={contentItem.items} />}
+        {tabId === 'toAward' && <ReviewRatingsToAward items={reviewList[tabId]} />}
       </div>
     </div>
   );
