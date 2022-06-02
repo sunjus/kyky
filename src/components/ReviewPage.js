@@ -1,42 +1,27 @@
 import React, { useState } from 'react';
-import Review from './Review';
 import './ReviewPage.css';
-
-const content = [
-  {
-    tab: 'Ratings to Award (to sellers)',
-    emptyMsg: 'There are no reviews to be awarded',
-  },
-  {
-    tab: 'Pending Ratings',
-    emptyMsg: 'You have no pending reviews',
-  },
-  {
-    tab: 'My Ratings (as buyer)',
-    emptyMsg: 'You have no reviews',
-    reviews: [],
-  },
-];
+import data from '../data_for_review';
+import ReviewRatingsToAward from './ReviewRatingsToAward';
 
 const useTabs = (initialTabs, allTabs) => {
   const [contentIndex, setContentIndex] = useState(initialTabs);
   return {
+    contentIndex,
     contentItem: allTabs[contentIndex],
     contentChange: setContentIndex,
   };
 };
 
 function Reviewpage() {
-  const { contentItem, contentChange } = useTabs(0, content);
-  const reviewList = contentItem.reviews;
-  const nReviews = reviewList ? reviewList.length : 0;
+  const { contentIndex, contentItem, contentChange } = useTabs(0, data.contents);
+
   return (
     <div className="reviewpage">
       <div className="review_title">
         <h3>Reveiws.Feedback</h3>
       </div>
       <div className="review_container">
-        {content.map((section, index) => (
+        {data.contents.map((section, index) => (
           <div className="review_tabs" key={section.tab}>
             <button onClick={() => contentChange(index)} classNane="review_btn" type="button">
               {section.tab}
@@ -45,9 +30,7 @@ function Reviewpage() {
         ))}
       </div>
       <div className="review_contents">
-        {nReviews === 0
-          ? contentItem.emptyMsg
-          : reviewList.map((review) => <Review data={review} key={review.index} />)}
+        {contentIndex === 0 && <ReviewRatingsToAward items={contentItem.items} />}
       </div>
     </div>
   );
