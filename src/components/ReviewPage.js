@@ -2,40 +2,28 @@ import React, { useState } from 'react';
 import data from '../data_for_review';
 import ReviewTabs from './ReviewTabs';
 import ReviewRatingsToAward from './ReviewRatingsToAward';
+import ReviewPendingReviews from './ReviewPendingReviews';
+import ReviewMyReviews from './ReviewMyReviews';
 import './ReviewPage.css';
-
-/*
-const useTabs = (initialTabId) => {
-  const [tabId, setTabId] = useState(initialTabs);
-  return {
-    tabIndex,
-    contentItem: allTabs[contentIndex],
-    contentChange: setContentIndex,
-  };
-};
-*/
 
 const tabsData = [
   {
     title: 'Ratings to Award (to sellers)',
-    emptyMsg: 'There are no reviews to be awarded',
     id: 'toAward',
   },
   {
     title: 'Pending Ratings',
-    emptyMsg: 'You have no pending reviews',
     id: 'pending',
   },
   {
     title: 'My Ratings (as buyer)',
-    emptyMsg: 'You have no reviews',
     id: 'myratings',
   },
 ];
 
 function Reviewpage() {
   const [tabId, setTabId] = useState('toAward');
-
+  // take data from static js file while dev
   const { reviewList } = data;
   return (
     <div className="reviewpage">
@@ -47,6 +35,8 @@ function Reviewpage() {
       </div>
       <div className="review_contents">
         {tabId === 'toAward' && <ReviewRatingsToAward items={reviewList[tabId]} />}
+        {tabId === 'pending' && <ReviewPendingReviews items={reviewList[tabId]} />}
+        {tabId === 'myratings' && <ReviewMyReviews items={reviewList[tabId]} />}
       </div>
     </div>
   );
