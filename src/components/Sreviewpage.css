@@ -1,0 +1,4 @@
+.tab_container .active {
+    color: red;
+    background-color: blue;
+}
