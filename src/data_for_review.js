@@ -9,13 +9,20 @@ const reviewList = {
     },
     {
       transactionId: 1,
-      service: 'Frontend Developer',
+      service: 'Full-stack Developer',
       seller: 'Serena',
       completed: 'n/a',
       price: 50,
     },
   ],
-  pending: [],
+  pending: [
+    {
+      service: 'Front-end Developer',
+      price: 75,
+      buyer: 'Ariana',
+      date: '02-JUNE-2022',
+    },
+  ],
   myratings: [],
 };
 

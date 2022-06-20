@@ -10,17 +10,15 @@ function ReviewPendingReviews({ items }) {
       <tr>
         <th>The name of service</th>
         <th>Price</th>
-        <th>Seller</th>
-        <th>Date completed</th>
-        <th>options</th>
+        <th>Buyer</th>
+        <th>Order date</th>
       </tr>
       {items.map((item) => (
         <tr key={item.transactionId}>
           <td>{item.service}</td>
           <td>{item.price}</td>
-          <td>{item.seller}</td>
-          <td>{item.completed}</td>
-          <td><button type="button">Rate Now</button></td>
+          <td>{item.buyer}</td>
+          <td>{item.date}</td>
         </tr>
       ))}
     </table>
