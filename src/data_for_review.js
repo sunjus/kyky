@@ -23,7 +23,14 @@ const reviewList = {
       date: '02-JUNE-2022',
     },
   ],
-  myratings: [],
+  myratings: [
+    {
+      service: 'Front-end Developer',
+      classification: '⭐',
+      buyer: 'Ariana',
+      comment: 'related data',
+    },
+  ],
 };
 
 export default { reviewList };

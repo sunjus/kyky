@@ -9,18 +9,16 @@ function ReviewMyReviews({ items }) {
     <table>
       <tr>
         <th>The name of service</th>
-        <th>Price</th>
-        <th>Seller</th>
-        <th>Date completed</th>
-        <th>options</th>
+        <th>Classification</th>
+        <th>Buyer</th>
+        <th>Comment</th>
       </tr>
       {items.map((item) => (
         <tr key={item.transactionId}>
           <td>{item.service}</td>
-          <td>{item.price}</td>
-          <td>{item.seller}</td>
-          <td>{item.completed}</td>
-          <td><button type="button">Rate Now</button></td>
+          <td>{item.classification}</td>
+          <td>{item.buyer}</td>
+          <td>{item.comment}</td>
         </tr>
       ))}
     </table>
